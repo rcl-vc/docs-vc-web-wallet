@@ -5,7 +5,7 @@ has_children: false
 nav_order: 1
 ---
 
-# Open VC Web Wallet
+# Overview
 
 The Open Verifiable Credential (VC) Web Wallet ia an open-source ASP.NET Core web application used by VC Holders to store and share their credential online. The application can be hosted by anyone desirous of hosting a VC wallet online.
 
