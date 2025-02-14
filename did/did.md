@@ -23,7 +23,7 @@ The Open VC Web Wallet only supports RSA keys for DIDs created with the ``did:jw
 The keys should be formatted in the [PEM] format and issued in a text (``.txt``) file.
 
 ### Example Private Key in PEM format issued as a text file
-```bash
+```
 -----BEGIN RSA PRIVATE KEY-----
 MIIEogIBAAKCAQEAm1rdLzutW7fSndzQhDYfCCoApsm6kod9nBEHib+3GAKLMRtA
 7Kw2CtdxckvHCv+oJyaoLnOM4uh7BYrO9InQhPpl73hvbVDW2jsOc8m3QDhd5X4F
@@ -54,7 +54,7 @@ SePVykjStRzrUbZ1JtIznzunR5jIk5WOTTOEOzFWKJt/W5xou1U=
 ```
 
 ### Example Public Key in PEM format issued as a text file
-```bash
+```
 -----BEGIN RSA PUBLIC KEY-----
 MIIBCgKCAQEAm1rdLzutW7fSndzQhDYfCCoApsm6kod9nBEHib+3GAKLMRtA7Kw2
 CtdxckvHCv+oJyaoLnOM4uh7BYrO9InQhPpl73hvbVDW2jsOc8m3QDhd5X4F5MDO
@@ -114,7 +114,17 @@ The user's public key should be used to create the user's DID using the [did:jwk
 ### Example DID created with the ``did:jwk`` method and issued as a text file
 
 ```bash
-did:jwk:eyJhbGciOiJSUzI1NiIsImt0eSI6IlJTQSIsIm4iOiI4cF9VYXZXZnlsbjJYeHY1el9GMjdBeVh4WExxU1dyMm5DQno4ZE9vUTNYeTF6MUVsWHRvWl9Vd1p5cTFLNE1DRkVHMkl6S0NPaWZUYmJaS0plU3VtUlJQeFpoN2RjOENmU0YxUWE1Z3lIWjJxQVlOTjRLc2EyVEtlaXJMRVZzcW5tY21fR0RxU3VYUVg5UUJMNzV4b3UyWHlid1F3VG9ZdklBRTRQUjRwRjc2S1kxZjZtR09GMkV1WVZlakNwU2VzRmw3SEx1eFliV0lDZGxDSGhCWmV1MTNfSWZPRHNKWi1MTEthTzlWVk1YMHVzQ2dwdXc5TnpfckFBd2pMRmI4TWk3aEYzRWpDWFVzT19uY2xEVGxMNkYwVUdoWVhzT0ZvX25iQ2cxcHJkVFhRV1NEeS05UjVubUhobVRucUJfOHMzR0E3Sk1nakxlSmZpVjkzRloxZFEiLCJqd2siOnsibiI6IjhwX1VhdldmeWxuMlh4djV6X0YyN0F5WHhYTHFTV3IybkNCejhkT29RM1h5MXoxRWxYdG9aX1V3WnlxMUs0TUNGRUcySXpLQ09pZlRiYlpLSmVTdW1SUlB4Wmg3ZGM4Q2ZTRjFRYTVneUhaMnFBWU5ONEtzYTJUS2VpckxFVnNxbm1jbV9HRHFTdVhRWDlRQkw3NXhvdTJYeWJ3UXdUb1l2SUFFNFBSNHBGNzZLWTFmNm1HT0YyRXVZVmVqQ3BTZXNGbDdITHV4WWJXSUNkbENIaEJaZXUxM19JZk9Ec0paLUxMS2FPOVZWTVgwdXNDZ3B1dzlOel9yQUF3akxGYjhNaTdoRjNFakNYVXNPX25jbERUbEw2RjBVR2hZWHNPRm9fbmJDZzFwcmRUWFFXU0R5LTlSNW5tSGhtVG5xQl84czNHQTdKTWdqTGVKZmlWOTNGWjFkUSIsImUiOiJBUUFCIn0sImUiOiJBUUFCIn0
+did:jwk:eyJhbGciOiJSUzI1NiIsImt0eSI6IlJTQSIsIm4iOiI4cF9VYXZXZnlsbjJYeHY1el9GMjdBeVh4WExxU1dyMm
+5DQno4ZE9vUTNYeTF6MUVsWHRvWl9Vd1p5cTFLNE1DRkVHMkl6S0NPaWZUYmJaS0plU3VtUlJQeFpoN2RjOENmU0YxUWE1
+Z3lIWjJxQVlOTjRLc2EyVEtlaXJMRVZzcW5tY21fR0RxU3VYUVg5UUJMNzV4b3UyWHlid1F3VG9ZdklBRTRQUjRwRjc2S1
+kxZjZtR09GMkV1WVZlakNwU2VzRmw3SEx1eFliV0lDZGxDSGhCWmV1MTNfSWZPRHNKWi1MTEthTzlWVk1YMHVzQ2dwdXc5
+TnpfckFBd2pMRmI4TWk3aEYzRWpDWFVzT19uY2xEVGxMNkYwVUdoWVhzT0ZvX25iQ2cxcHJkVFhRV1NEeS05UjVubUhobV
+RucUJfOHMzR0E3Sk1nakxlSmZpVjkzRloxZFEiLCJqd2siOnsibiI6IjhwX1VhdldmeWxuMlh4djV6X0YyN0F5WHhYTHFT
+V3IybkNCejhkT29RM1h5MXoxRWxYdG9aX1V3WnlxMUs0TUNGRUcySXpLQ09pZlRiYlpLSmVTdW1SUlB4Wmg3ZGM4Q2ZTRj
+FRYTVneUhaMnFBWU5ONEtzYTJUS2VpckxFVnNxbm1jbV9HRHFTdVhRWDlRQkw3NXhvdTJYeWJ3UXdUb1l2SUFFNFBSNHBG
+NzZLWTFmNm1HT0YyRXVZVmVqQ3BTZXNGbDdITHV4WWJXSUNkbENIaEJaZXUxM19JZk9Ec0paLUxMS2FPOVZWTVgwdXNDZ3
+B1dzlOel9yQUF3akxGYjhNaTdoRjNFakNYVXNPX25jbERUbEw2RjBVR2hZWHNPRm9fbmJDZzFwcmRUWFFXU0R5LTlSNW5t
+SGhtVG5xQl84czNHQTdKTWdqTGVKZmlWOTNGWjFkUSIsImUiOiJBUUFCIn0sImUiOiJBUUFCIn0
 
 ```
 
@@ -129,7 +139,7 @@ The Open VC Web Wallet only supports DIDs created with the ``did:jwk`` method.
 
 A holder can create their DID in the Open VC Web Wallet. The DID will be provided to the user as a text (``.txt``) file. The associated private key will be provided to the user to save in a safe place.
 
-** The holder's private key is not saved in the wallet.**
+**The holder's private key is not saved in the wallet.**
 
 The holder will then upload the DID and use the private key to verify that they own the public key included in the DID. Once verified, the DID is saved to the wallet.
 
