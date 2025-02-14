@@ -1,4 +1,4 @@
-# Open Verifiable Credential (VC) Web Wallet
+# Open VC Web Wallet
 
 The Open Verifiable Credential (VC) Web Wallet ia an open-source ASP.NET Core web application used by VC Holders to store and share their credential online. The application can be hosted by anyone desirous of hosting a VC wallet online.
 
@@ -20,9 +20,9 @@ A VC Issuer will use a software platform to issue a VC. The holder of the VC wil
 
 ## Wallet Application
 
-A wallet application is used by a holder to store and share their VCs. A web wallet is an application hosted online, usually with a cloud provider. The Open VC VC Web Wallet is such an application.
+A wallet application is used by a holder to store and share their VCs. A web wallet is an application hosted online, usually with a cloud provider. The Open VC Web Wallet is such an application.
 
 ## Verifier
 
-A holder will share their VCs in their wallet with verifiers such as employers. The verifier will usually us an application to verify that the VC is valid. The verification application may be part of the wallet, issuer platform or be an independent application.
+A holder will share their VCs in their wallet with verifiers such as employers. The verifier will usually use an application to verify that the VC is valid. The verification application may be part of the wallet, issuer platform or be an independent application.
 
