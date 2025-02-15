@@ -7,7 +7,7 @@ nav_order: 3
 
 # Decentralized Identifier (DID)
 
-A Decentralized Identifier is used to uniquely identify the holder of a VC. The DID must be created following the relevant [W3C Open Standards](https://www.w3.org/TR/did-1.0/).
+A Decentralized Identifier is used to uniquely identify holders and issuers of VCs. The DID must be created following the relevant [W3C Open Standards](https://www.w3.org/TR/did-1.0/).
 
 # Requirements for the DID
 
@@ -20,7 +20,7 @@ An asymmetric public/private key pair must be created with the [RSA](https://dat
 {: .information }
 The Open VC Web Wallet only supports RSA keys for DIDs created with the ``did:jwk`` method.
 
-The keys should be formatted in the [PEM] format and issued in a text (``.txt``) file.
+The keys should be formatted in the [PEM](https://www.rfc-editor.org/rfc/rfc1422) format and issued in a text (``.txt``) file.
 
 ### Example Private Key in PEM format issued as a text file
 ```
@@ -65,14 +65,14 @@ kZke3lwptHQnywd/Hriv7nObS6OEZNn3DQIDAQAB
 -----END RSA PUBLIC KEY-----
 ```
 
-The public key is should be issued to a user in a DID using the ``did:jwk`` method. This will make the public key accessible to platforms for the verification of VCs.
+The public key is used to create the DID using the ``did:jwk`` method. The DID will make the user's public key accessible to platforms for the verification of VCs.
 
 {: .information }
-The private key should not be saved in a software platform for security and privacy reasons. It should be issued to the user as a text (``.txt``) file and the user should save the file in a safe place. Only the user should posses and have control of the private key.
+The user's private key should not be saved in the software platform for security and privacy reasons. It should be issued to the user as a text (``.txt``) file. The user should save the file in a safe place using a storage method of their own choice. Only the user should posses and have control of their private key.
 
 ## Public Key as a JWK
 
-The public key must be formatted as a [JSON Web Key](https://datatracker.ietf.org/doc/html/rfc7517) (JWK). It is recommended that the JWK contains the key parameters. It can be in the main body of the JWK or in a separate property named ``jwk``.
+The public key must be formatted as a [JSON Web Key](https://datatracker.ietf.org/doc/html/rfc7517) (JWK). It is recommended that the JWK contain the key parameters. It can be in the main body of the JWK or in a property named ``jwk``.
 
 ### Example of key parameters in the main body of a JWK
 ```json
@@ -84,7 +84,7 @@ The public key must be formatted as a [JSON Web Key](https://datatracker.ietf.or
 }
 ```
 
-### Example of key parameters in a separate property in the JWK
+### Example of key parameters in a ``jwk`` property in the JWK
 
 ```json
 {
@@ -97,7 +97,7 @@ The public key must be formatted as a [JSON Web Key](https://datatracker.ietf.or
 }
 ```
 
-Although accepted, but highly discouraged, the JWK can include a ``kid`` property that includes an URL address to hosts the public key. When a ``kid`` is provided the keys parameters should not be included in the did. The reason why this approach is discourgaed is that if the website hosting the publick key goes out of business, there is no way left to verify the VC that references the DID.
+Although accepted, but highly discouraged, the JWK can include a ``kid`` property that contain a URL address that hosts the user's public key. When a ``kid`` is provided, the key parameters should not be included in the DID. The reason why this approach is discouraged is that if the website hosting the public key goes out of business, there is no way left to verify the VC that references the DID.
 
 ### Example of a ``kid`` used in a JWK to reference a public key
 ```json
@@ -109,7 +109,7 @@ Although accepted, but highly discouraged, the JWK can include a ``kid`` propert
 ```
 ## did:jwk Method
 
-The user's public key should be used to create the user's DID using the [did:jwk](https://github.com/quartzjer/did-jwk/blob/main/spec.md) method. This method allows for the immediate resolution of the user's public key since it is 'encapsulated' in the DID itself. This method is much simpler and potentially less expensive than other methods that use block chains to make the public key accessible to platforms. A DID should be issued to the user as a text (``txt``) file.
+The user's public key should be used to create the user's DID using the [did:jwk](https://github.com/quartzjer/did-jwk/blob/main/spec.md) method. This method allows for the immediate resolution of the user's public key since it is 'encapsulated' in the DID itself. This method is much simpler and potentially less expensive than other methods that use block chains to make the public key accessible to platforms. A DID should be issued to the user as a text (``.txt``) file.
 
 ### Example DID created with the ``did:jwk`` method and issued as a text file
 
@@ -129,7 +129,7 @@ SGhtVG5xQl84czNHQTdKTWdqTGVKZmlWOTNGWjFkUSIsImUiOiJBUUFCIn0sImUiOiJBUUFCIn0
 ```
 
 {: .information }
-The Open VC Web Wallet only supports DIDs created with the ``did:jwk`` method.
+The Open VC Web Wallet only supports DIDs created with the ``did:jwk`` method using the RSA algorithm.
 
 # DID for Holders
 
@@ -143,11 +143,11 @@ A holder can create their DID in the Open VC Web Wallet. The DID will be provide
 
 The holder will then upload the DID and use the private key to verify that they own the public key included in the DID. Once verified, the DID is saved to the wallet.
 
-The user can also use their DID in other wallets that support the ``jwk:did`` method.
+The user can also save their DID in other external wallets that support the ``did:jwk`` method.
 
 ## DID created in an External Platform
 
 A holder can save a DID created on a external platform in the Open VC Web Wallet. The DID must comply with the requirements as outline above.
 
-In a similar fasion, the user will upload their external DID and use their private key to verify the DID. Once verified, the DID is saved to the wallet.
+In a similar fashion, the user will upload their external DID and use their private key to verify the DID. Once verified, the DID is saved to the wallet.
 

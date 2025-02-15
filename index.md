@@ -23,7 +23,7 @@ This application will be used to store and share VCs that comply with the W3C st
 
 ## Issuer Platform
 
-A VC Issuer will use a software platform to issue a VC. The holder of the VC will be uniquely identified by a [Decentralized Identifier]() (DID). The holder DID can be created in the issuer platform or in a wallet application.
+A VC Issuer will use a software platform to issue [Verifiable Credentials](). The issuer , as well as, the holder of the VC will be each uniquely identified by a [Decentralized Identifier](./did/did.md) (DID). The holder's DID can be created in the issuer platform or in a wallet application.
 
 ## Wallet Application
 
